@@ -1,0 +1,783 @@
+/* ==============================
+========Global Component======
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  color: rgb(59, 58, 58);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/* ==============================
+========Reusable Component======
+============================== */
+
+section {
+  padding: 80px 0;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+/*========Heading====== */
+h1,h2,h3{
+  font-weight: 300;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 200%;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+h2{
+  font-size: 180%;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+h2:after{
+  content: " ";
+  height: 2px;
+  display: block;
+  width: 15%;
+  margin: 25px auto;
+  /* margin-left: ; */
+  background-color: #e67d22;
+}
+
+h3{
+  font-size: 110%;
+}
+
+/*========Button======*/
+.btn:link,
+.btn:visited,
+input[type="submit"]{
+  padding: 5px 15px;
+  border: 1px solid #e67e22;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 400;
+  transition: .3s;
+  cursor: pointer;
+}
+
+/* =========paragraph=========== */
+p {
+  line-height: 145%;
+  margin: 10px 0;
+}
+
+
+
+/* ==============================
+============ICON===========
+============================== */
+
+ion-icon{
+  font-size: 280%;
+  color: #e67e22;
+  margin-bottom: 5px;
+}
+
+.city-box ion-icon {
+  font-size: 110%;
+  margin: 0px 5px -5px 0;
+}
+
+.plan-box ion-icon {
+  font-size: 120%;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+footer ion-icon {
+  font-size: 120%;
+  color: rgb(114, 113, 113);
+  transition: .3s;
+}
+
+footer ion-icon:hover {
+  color: #e67e22;
+  transform: scale(1.15);
+}
+
+/* ==============================
+========header Section======
+============================== */
+
+header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.698),rgba(0, 0, 0, 0.692)), url(images/hero.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* -----------logo---------- */
+.logo {
+  height: 100px;
+  margin-top: 20px;
+  float: left;
+  color: #fff;
+}
+
+.logo-black {
+  display: none;
+}
+
+/* ------------navigation bar--------- */
+.nav-bar{
+  float: right;
+  margin-top: 60px;
+}
+
+.nav-bar li {
+  display: inline-block;
+  margin-left: 10px;
+  list-style: none;
+}
+
+.nav-bar li a:link,
+.nav-bar li a:visited{
+  text-decoration: none;
+  color: rgb(185, 181, 181);
+  font-weight: 400;
+  font-size: 90%;
+  padding: 5px 0;
+  transition: .3s;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  transform: .3s;
+  margin-left: 30px;
+}
+
+.nav-bar li a:hover,
+.nav-bar li a:active{
+  border-bottom: 2px solid #e67e22;
+  color: #fff;
+}
+
+/* -----------sticky nav-------------- */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 10%;
+  background-color: rgba(#fff,.9);
+  color: #000;
+
+}
+
+.sticky .logo-black {
+  height: 60px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  float: left;
+  color: #fff;
+  display: block;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .nav-bar{
+  float: right;
+  margin-top: 25px;
+}
+
+.stcky .nav-bar li a:link,
+.stcky .nav-bar li a:visited{
+  text-decoration: none;
+  color: rgb(185, 181, 181);
+  font-weight: 400;
+  font-size: 90%;
+  padding: 5px 0;
+  transition: .3s;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  transform: .3s;
+  margin-left: 30px;
+}
+
+.stcky .nav-bar li a:hover,
+.stcky .nav-bar li a:active{
+  border-bottom: 2px solid #e67e22;
+  color: #000;
+}
+
+/* -----------header text------- */
+.header-text-box{
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* ----------button--------- */
+
+.btn-hungry:link,
+.btn-hungry:visited {
+  margin-right: 15px;
+  background-color: #e67e22;
+}
+
+.btn-show-more:link,
+.btn-show-more:visited{
+  color: #e67e22;
+}
+
+.btn-show-more:hover,
+.btn-show-more:active,
+.btn-hungry:hover,
+.btn-hungry:active{
+  background-color: #d35400;
+  color: #fff;
+}
+
+
+/* ==============================
+========Features Section======
+============================== */
+
+.features{
+  padding: 80px 0;
+}
+
+.features-main-text{
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.features-box {
+  padding: 0 10px;
+  text-align: center;
+}
+
+
+/* ==============================
+========Meals Section======
+============================== */
+
+.meal-section{
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.meal-section ul li{
+  display: block;
+  width: 25%;
+  float: left;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.meal-photo {
+  opacity: .7;
+  width: 100%;
+  margin: 0;
+  transform: scale(1.2);
+  transition: opacity .5s, transform .5s;
+}
+
+.meal-photo:hover{
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+
+/* ==============================
+========Steps Section======
+============================== */
+
+.steps {
+  background-color: #f1f1f1;
+  padding: 80px 0;
+}
+
+.steps-of-order:first-child{
+  margin-top: 40px;
+  text-align: right;
+  padding-right: 10%;
+}
+.app-screenshot {
+  width: 40%;
+  height: auto;
+}
+
+.steps-of-order:last-child {
+  margin-top: 50px;
+}
+
+.order-numbering span{
+  font-size: 190%;
+  color: #e67e22;
+  border: 2px solid #d35400;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  float: left;
+  margin-right: 20px;
+}
+
+.order-numbering p {
+  margin-top: 20px;
+}
+
+.appstore {
+  margin-top: 35px;
+}
+
+.appstore img{
+  height: 50px;
+  width: auto;
+}
+
+.iphone {
+  margin-right: 20px;
+}
+
+
+/* ==============================
+========City Section======
+============================== */
+
+.cities {
+  padding: 80px 0;
+}
+
+.city-box {
+  padding: 0 10px;
+}
+
+.city-box img {
+  width: 100%;
+}
+
+.city-box li {
+  list-style: none;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+
+.city-box a {
+  color: #d35400;
+  text-decoration: none;
+  transition: .2s;
+  border-bottom: 2px solid transparent;
+}
+
+.city-box a:hover {
+  border-bottom: 2px solid #e67e22;
+}
+
+
+/* ==============================
+========Testimonial Section======
+============================== */
+
+.testimonial {
+  padding: 80px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.787),rgba(0, 0, 0, 0.787)), url(images/back-customers.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.testimonial h2 {
+  color: #fff;
+}
+
+.testimonial-body {
+  margin-top: 30px;
+}
+
+blockquote:before {
+  content: "\201c";
+  display: block;
+  font-size: 400%;
+  margin-left: -15px;
+  margin-bottom: -5px;
+}
+
+blockquote {
+  padding: 0 10px;
+  line-height: 120%;
+  font-size: 90%;
+}
+
+cite {
+  display: block;
+  font-size: 100%;
+  margin-top: 20px;
+}
+
+cite img{
+  height: 45px;
+  width: auto;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+/* ==============================
+========Plan Section======
+============================== */
+
+.plan {
+  background-color: rgb(223, 223, 223);
+}
+
+.plan-box {
+  background-color: #fff;
+  width: 90%;
+  border-radius: 7px;
+  box-shadow: 0 3px rgb(246, 246, 246);
+}
+
+.plan-box div {
+  border-bottom: 1px solid #bdbdbd;
+  padding: 20px;
+}
+
+.plan-box div:first-child {
+  background-color: rgb(246, 246, 246);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.plan-box div:last-child {
+  border: none;
+}
+
+.plan-box-main-text h3 {
+  margin-bottom: 20px;
+}
+
+.plan-price {
+  margin: 15px 0;
+}
+
+.plan-box-main-text span {
+  font-size: 300%;
+  font-weight: 100;
+  color: #d35400;
+  margin-left: -3px;
+}
+
+.plan-box li {
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.plan-box ul {
+  
+}
+
+.plan-btn {
+  text-align: center;
+}
+
+.plan-btn .btn:link,
+.plan-btn .btn:visited {
+  background-color: #fff;
+  color: #e67e22;
+}
+
+.plan-btn .btn:hover,
+.plan-btn .btn:active {
+  background-color: #e67e22;
+  color: #fff;
+} 
+
+
+/* ==============================
+========Contact Section======
+============================== */
+
+.contact {
+
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+  height: 40px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+select,
+.contact-form textarea {
+  padding: 5px;
+  text-transform: capitalize;
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.contact-form input[type="checkbox"] {
+  margin: 10px 5px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.btn-contact {
+  text-align: center;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #d35400;
+}
+
+
+/* ==============================
+========Footer Section======
+============================== */
+
+footer {
+  padding: 50px;
+  color: rgb(114, 113, 113);
+  background-color: rgb(22, 22, 22);
+}
+
+.footer-nav li,
+.footer-social-links li {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px;
+  font-size: 110%;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.footer-social-links li a:link,
+.footer-social-links li a:visited{
+  color: rgb(114, 113, 113);
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.footer-social-links li a:hover,
+.footer-social-links li a:active {
+  color: #e67e22;
+}
+
+.footer-social-links {
+  float: right;
+}
+
+.footer-nav li:last-child,
+.footer-social-links li:last-child {
+  margin-right: 0;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 90%;
+  padding: 20px 0;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.footer-copyright a:link,
+.footer-copyright a:visited {
+  color: rgb(114, 113, 113);
+  border-bottom: 1px solid transparent;
+  transition: .2s;
+}
+
+.footer-copyright a:hover,
+.footer-copyright a:active {
+  color: #e67e22;
+  border-bottom: 1px solid #e67e22;
+}
+
+
+
+/* =============================================================
+=========================Media Queries=======================
+============================================================= */
+
+@media only screen and (max-width:1200px) {
+  .header-text-box {
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .row {
+    padding: 0 5%;
+  }
+
+  .app-screenshot {
+    width: 35%;
+    height: auto;
+  }
+  
+  .steps-of-order:first-child {
+    margin-top: 100px;
+  }
+}
+
+
+@media only screen and (max-width:980px) {
+  body {
+    font-size: 18px;
+  }
+
+}
+
+
+@media only screen and (max-width:767px) {
+  .logo {
+    float: none;
+  }
+  h1 {
+    font-size: 120%;
+  }
+
+  .header-text-box {
+    margin-top: 100px;
+  }
+  body,
+  html {
+    font-size: 16px;
+  }
+
+  header,
+  section {
+    padding: 0 60px;
+  }
+
+  .col {
+    width: 100%;
+    /* text-align: center; */
+    
+  }
+
+  .app-screenshot {
+    width: 40%;
+    height: auto;
+  }
+
+  .steps-of-order:first-child {
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 30px;
+  }
+
+  .appstore {
+    text-align: center;
+  }
+
+  .city-box {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .city-box img {
+    width: 70%;
+  }
+
+  blockquote {
+    margin-top: 30px;
+  }
+
+  .plan-box {
+    margin-top: 30px;
+    margin-left: 15px;
+  }
+
+  .plan-box:last-child {
+    margin-bottom: 50px;
+  }
+
+  form {
+    text-align: center;
+    width: 100%;
+  }
+
+  form input {
+    margin: 10px 0;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-nav {
+    float: none;
+  }
+
+  .footer-social-links {
+    margin-top: 30px;
+    float: none;
+  }
+}
+
+
+@media only screen and (max-width:480px) {
+
+}
